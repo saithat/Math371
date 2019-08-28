@@ -6,6 +6,11 @@ For series B, you have to use 0.310345 for x.
 2. I expect series A to be more efficient because
 it seems to use less operations.
 ========================================
+5. 170 terms for series A, N:  170  sum:  0.6418538862240635  error:  -5.166878036533262e-11
+   10 terms for series B, N:  10  sum:  0.6418542677258401  error:  -3.81553445394367e-07
+========================================
+6. Series B is more efficient because each terms grows faster.
+========================================
 import math
 N = int(input("Enter N terms to compute: "))
 series = 0
@@ -30,8 +35,3 @@ error = true_value - series
 
 
 print("N: ", N, " sum: ", series, " error: ", error)
-========================================
-5. 170 terms for series A
-   10 terms for series B
-========================================
-6. Series B is more efficient because each terms grows faster.

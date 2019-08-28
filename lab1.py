@@ -8,8 +8,8 @@ for i in range(1,N):
     #    print("N is: ", i)
     #series B
     series += pow(0.310345, (2*i)-1)/((2*i)-1)
-    #if(abs(pow(0.310345, (2*i)-1)/((2*i)-1)) < 1e-10):
-    #    print("N is: ", i)
+    if(abs(pow(0.310345, (2*i)-1)/((2*i)-1)) < 1e-10):
+        print("N is: ", i)
 
 #series A
 #series = -series
