@@ -1,0 +1,12 @@
+Lab2, Sai Thatigotla, 9/13/19
+======================================
+a. 1. Yes, there are 3 roots because the degree of the polynomial is 3
+   2. Plotting, bisection, fixed point iteration, Newton-Raphson, Secant
+   3. Yes, there is a root. Estimate 12 iterations
+   5. DONE:root= 1.3688081078207688 residual= 1.2740031252178596e-11 in 40 iters
+======================================
+   7. Yes, there are zeroes because tan(x) has zeroe and even thought x
+   scales tan(x), tan(x) approaches +infinity and -infinty so it will always
+   go through the x-axis. There are infinitely many roots at every pi.
+   8. Root:  98.9500628243319  residual:  -2.40163444686914e-12  iterations:  2
+   
