@@ -9,4 +9,8 @@ a. 1. Yes, there are 3 roots because the degree of the polynomial is 3
    scales tan(x), tan(x) approaches +infinity and -infinty so it will always
    go through the x-axis. There are infinitely many roots at every pi.
    8. Root:  98.9500628243319  residual:  -2.40163444686914e-12  iterations:  2
+======================================
+   9. After using BRENT, it achieved a root of 1.3688081078213727 in 6 iterations for F(x) and 
+   a root of 1.5707963267942011 in 52 iterations for G(x). BRENT is more efficient for  F(x) with
+   the bisection method and less efficient for G(x) using Newton-Raphson method.
    
