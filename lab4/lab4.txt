@@ -1,0 +1,41 @@
+Sai Thatigotla, 10/16/19
+***********************************
+a. The minumim error is 1.0096398659789564e-09 at h values of 7.450580596923828e-09 and 3.725290298461914e-09.
+The error gets worse for smaller h because of roundoff error increasing due to h decreasing below machine epsilon.
+***********************************
+b. The minimum error is 3.443875343604165e-13 at an h value of 7.62939453125e-06.
+The error gets worse for the same reason except the error decresed quicker.
+***********************************
+c. Centered difference performs better because it reaches a lower minimum error is lower and it reaches it quicker
+from a k of 17 versus a k of 27-28 for forward differentiation.
+***********************************
+d.
+from math import *
+
+def func(x):
+    return sin(x)
+
+def h_val(i):
+    return 1/(2**i)
+
+def forward(x, k, N):
+    f = open("lab4/outforward", "w+")
+    for i in range(k, N+1):
+        h = h_val(i)
+        fd = (func(x+h) - func(x))/h
+        error = abs(fd-cos(x))/cos(x)
+        print("FD: ", fd, " k: ", i, " h: ", h, " error: ", error, "\n")
+        f.write("%d %f %f\n" % (i, log(h), log(error)))
+    f.close()
+
+def centered(x, k, N):
+    f = open("lab4/out", "w+")
+    for i in range(k, N+1):
+        h = h_val(i)
+        cd = (func(x+h) - func(x-h))/(2*h)
+        error = abs(cd-cos(x))/cos(x)
+        print("CD: ", cd, " k: ", i, " h: ", h, " error: ", error, "\n")
+        f.write("%d %f %f\n" % (i, log(h), log(error)))
+    f.close()
+
+centered(1, 5, 30)
